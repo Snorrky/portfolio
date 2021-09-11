@@ -1,0 +1,44 @@
+.main {
+    position: relative;
+    background: url(../img/main_bg.jpg) center center/cover no-repeat;
+    min-height: 800px;
+    .social {
+        position: absolute;
+        font-family: $font;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .delimetr {
+            display: block;
+            height: 70px;
+            width: 0px;
+            border: 2px solid #000000;
+            margin: 0 15px;
+        }
+
+        &__icons {
+            display: flex;
+            flex-direction: column;
+        }
+        &__icon {
+            width: 20px;
+            height: 100%;
+            img {
+                width: 100%;
+
+            }
+        }
+        &__text {
+            transform: rotate(-90deg);
+        }
+    }
+}
