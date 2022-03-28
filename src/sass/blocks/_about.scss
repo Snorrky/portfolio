@@ -1,0 +1,55 @@
+.about {
+    .container {
+        width: 100%;
+        max-width: 1040px;
+        display: flex;
+        margin-top: 120px;
+    }
+    &__img {
+        height: 100%;
+        display: block;
+    }
+    .subtitle {
+        position: relative;
+        font-size: 16px;
+        font-weight: bold;
+        padding-left: 10px; 
+        @include yellow-circle();
+    }
+    .title {
+        display: flex;
+    }
+    &__icon {
+        position: relative;
+        @include yellow-circle();
+    }
+    &__text-container {
+        margin-left: 70px;
+    }
+    &__main-text {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 500;
+    }
+    &__textslist {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        margin-top: 40px;
+    }
+    &__textitem {
+        list-style-type: none;
+        position: relative;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__icon {
+        display: block;
+        
+    }
+    .title_fz36 {
+        position: relative;
+        @include yellow-line();
+        margin-bottom: 30px;
+    }
+}

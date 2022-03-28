@@ -1,5 +1,5 @@
 .hamburger {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 30px;
     z-index: 1;
@@ -17,5 +17,92 @@
     }
     span.long {
         width: 36px;
+    }
+}
+
+.menu {
+    &__block {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        max-width: 345px;
+        width: 100%;
+        background: $main-color;
+        z-index: 3;
+        transition: all ease 0.5s;
+    }
+    &__list {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 140px;
+        padding-left: 35px;
+    }
+    &__link {
+        margin-bottom: 15px;
+        list-style-type: none;
+        position: relative;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        color: #FFFFFF;
+        &:hover {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: -35px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 1px solid #000000;
+            border-radius: 100%;
+        }
+        a {
+            color: #FFFFFF;
+            &:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+    &__cover {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.75);
+        z-index: 1;
+        transition: all ease 0.5s;
+    }
+    &__cover_hide {
+        visibility: hidden;
+        transition: all ease 0.5s;
+        background: rgba(255, 255, 255, 0);
+    }
+    &_hide {
+        transition: all ease 0.5s;
+        transform: translateX(-100%);
+    }
+    &__social {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }

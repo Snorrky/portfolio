@@ -11,3 +11,15 @@
         z-index: -1;
     }
 }
+
+@mixin yellow-line {
+    &::after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 2px;
+        background: $main-color;
+        bottom: 0;
+        
+    }
+}
